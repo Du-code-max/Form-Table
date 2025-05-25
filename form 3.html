@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html.Login form</title>
+</head>
+<body>
+    <h1>Contact us</h1>
+    
+    <form action="#" method="post">
+        <table border="1">
+            <tr>
+                <td class="required-field">
+                    <label for="name">Họ tên *</label><br>
+                    <input type="text" id="name" name="name" required>
+                </td>
+                <td class="required-field">
+                    <label for="email">E-mail *</label><br>
+                    <input type="email" id="email" name="email" required>
+                </td>
+            </tr>
+            <tr>
+                <td class="optional-field">
+                    <label for="phone">Điện thoại</label><br>
+                    <input type="tel" id="phone" name="phone">
+                </td>
+                <td class="optional-field">
+                    <label for="address">Địa chỉ</label><br>
+                    <input type="text" id="address" name="address">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="required-field">
+                    <label for="service">Chọn một dịch vụ *</label><br>
+                    <select id="service" name="service" required>
+                        <option value="">-- Chọn dịch vụ --</option>
+                        <option value="service1">Dịch vụ 1</option>
+                        <option value="service2">Dịch vụ 2</option>
+                        <option value="service3">Dịch vụ 3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="required-field">
+                    <label for="content">Nội dung *</label><br>
+                    <textarea id="content" name="content" required></textarea>
+                </td>
+            </tr>
+        </table>
+        
+        <div class="checkbox-label">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">Tôi đã đọc và đồng ý với điều khoản</label>
+        </div>
+        
+        <button type="submit" class="submit-btn">GỬI</button>
+        
+        <p class="required-note">(*) Thông tin bắt buộc phải nhập</p>
+    </form>
+</body>
+</html>
