@@ -7,57 +7,73 @@
     <title>html.Login form</title>
 </head>
 <body>
-    <h1>Contact us</h1>
-    
-    <form action="#" method="post">
-        <table border="1">
-            <tr>
-                <td class="required-field">
-                    <label for="name">Họ tên *</label><br>
-                    <input type="text" id="name" name="name" required>
-                </td>
-                <td class="required-field">
-                    <label for="email">E-mail *</label><br>
-                    <input type="email" id="email" name="email" required>
-                </td>
-            </tr>
-            <tr>
-                <td class="optional-field">
-                    <label for="phone">Điện thoại</label><br>
-                    <input type="tel" id="phone" name="phone">
-                </td>
-                <td class="optional-field">
-                    <label for="address">Địa chỉ</label><br>
-                    <input type="text" id="address" name="address">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" class="required-field">
-                    <label for="service">Chọn một dịch vụ *</label><br>
-                    <select id="service" name="service" required>
-                        <option value="">-- Chọn dịch vụ --</option>
-                        <option value="service1">Dịch vụ 1</option>
-                        <option value="service2">Dịch vụ 2</option>
-                        <option value="service3">Dịch vụ 3</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" class="required-field">
-                    <label for="content">Nội dung *</label><br>
-                    <textarea id="content" name="content" required></textarea>
-                </td>
-            </tr>
+    <h2 align="center" style="color:#3366cc;">Đăng ký du lịch</h2>
+
+    <form onsubmit="document.getElementById('message').innerText = 'Bạn đã đăng ký thành công!!!'; return false;">
+        <table border="1" align="center" bgcolor="#ffffcc" cellpadding="5">
+        <tr>
+            <td>Họ và tên</td>
+            <td><input type="text" size="30"></td>
+        </tr>
+        <tr>
+            <td>Địa chỉ</td>
+            <td><input type="text" size="30"></td>
+        </tr>
+        <tr>
+            <td>Điện thoại</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>Khách Việt Nam</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td>Chọn tour</td>
+            <td>
+            <select>
+                <option selected>Buôn mê thuột - Gia lai - Kontum</option>
+                <option>Hà Nội</option>
+                <option>Phú Quốc</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Phương tiện</td>
+            <td>
+            <input type="radio"> Máy bay
+            <input type="radio"> Xe ô tô
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+            <table border="1" width="100%" style="border-color:brown; margin-top:10px;">
+                <tr>
+                <td colspan="2"><b style="color:brown;">Số lượng đoàn khách</b></td>
+                </tr>
+                <tr>
+                <td>Người lớn <input type="number"min="0" style="width:40px;"></td>
+                <td>Trẻ em <input type="number" min="0" style="width:40px;"></td>
+                </tr>
+            </table>
+            </td>
+        </tr>
+        <tr>
+            <td>Ghi chú thêm</td>
+            <td>
+            <select multiple size="2">
+                <option selected>Có 2 trẻ em dưới 6 tuổi</option>
+                <option selected>Có 2 người ăn chay</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+            <input type="submit" value="Đồng ý">
+            </td>
+        </tr>
         </table>
-        
-        <div class="checkbox-label">
-            <input type="checkbox" id="terms" name="terms" required>
-            <label for="terms">Tôi đã đọc và đồng ý với điều khoản</label>
-        </div>
-        
-        <button type="submit" class="submit-btn">GỬI</button>
-        
-        <p class="required-note">(*) Thông tin bắt buộc phải nhập</p>
     </form>
+
+    <p id="message" align="center" style="color:orange; font-weight:bold;"></p>
 </body>
 </html>
